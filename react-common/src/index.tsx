@@ -16,7 +16,21 @@ const renderElement = (rootElement: HTMLElement | null, reactElement: ReactEleme
   }
 };
 
-renderElement(document.getElementById('section-home'), <HomeSection />);
+const sections: { [key: string]: JSX.Element }[] = 
+[
+  {
+    'section-home': <HomeSection />
+  }
+]
+
+sections.forEach((sectionObj) => {
+  Object.keys(sectionObj).forEach((key) => {
+    const element = document.getElementById(key);
+    if (element) {
+      renderElement(element, sectionObj[key]);
+    }
+  });
+});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
