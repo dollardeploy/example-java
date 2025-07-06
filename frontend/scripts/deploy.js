@@ -4,7 +4,6 @@ const rimraf = require('rimraf');
 
 process.env.NODE_ENV = 'production';
 
-const destinationProjects = ['spring-boot-java-react', 'spring-boot-kotlin-react'];
 const buildDir = path.resolve(__dirname, '../build');
 
 function copyDirectorySync(source, destination) {
@@ -26,14 +25,9 @@ function copyDirectorySync(source, destination) {
   }
 }
 
-for (const destinationProject of destinationProjects) {
-  const sourceDirectory = path.resolve(buildDir, './static');
-  const destinationDirectory = path.resolve(buildDir, `../../${destinationProject}/src/main/resources/static/section`);
-
-  rimraf.sync(destinationDirectory);
-  fs.mkdirSync(destinationDirectory, { recursive: true });
-
-  copyDirectorySync(sourceDirectory, destinationDirectory);
-
-  console.log(`Copied build outputs to project ${destinationProject}.`);
-}
+const sourceDirectory = path.resolve(buildDir, './static');
+const destinationDirectory = path.resolve(`../src/main/resources/static/section`);
+rimraf.sync(destinationDirectory);
+fs.mkdirSync(destinationDirectory, { recursive: true });
+copyDirectorySync(sourceDirectory, destinationDirectory);
+console.log(`Copied build outputs.`);
