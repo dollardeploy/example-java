@@ -1,6 +1,5 @@
-package com.cheonghyun.web.config.react;
+package com.dollardeploy.web.config.react;
 
-import com.cheonghyun.web.config.properties.ReactProperties;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -13,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.dollardeploy.web.config.properties.ReactProperties;
 
 import java.io.IOException;
 import java.util.Arrays;

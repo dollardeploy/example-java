@@ -1,6 +1,5 @@
-package com.cheonghyun.web.config.react;
+package com.dollardeploy.web.config.react;
 
-import com.cheonghyun.web.config.properties.ReactProperties;
 import io.undertow.server.DefaultByteBufferPool;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -18,6 +17,8 @@ import org.xnio.IoFuture;
 import org.xnio.OptionMap;
 import org.xnio.Xnio;
 import org.xnio.XnioWorker;
+
+import com.dollardeploy.web.config.properties.ReactProperties;
 
 import java.io.IOException;
 import java.net.URI;

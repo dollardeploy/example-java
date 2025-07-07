@@ -1,4 +1,4 @@
-package com.cheonghyun.web.config.properties;
+package com.dollardeploy.web.config.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
