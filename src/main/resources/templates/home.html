@@ -1,15 +1,42 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Spring Boot React Example</title>
-    <link rel="icon" type="image/x-icon" th:href="@{/static/favicon.ico}">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:href="@{/static/section/css/main.css}" th:unless="${@reactProperties.useReactBundle}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Spring Boot Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+  </style>
 </head>
-<body>
-<div id="section-home">
-</div>
-<script th:src="@{/static/js/bundle.js}" th:if="${@reactProperties.useReactBundle}"></script>
-<script defer th:src="@{/static/section/js/main.js}" th:unless="${@reactProperties.useReactBundle}"></script>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-lg shadow-md max-w-2xl text-center">
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">Welcome to the Java Spring Boot Example App!</h1>
+    <p class="text-gray-600 mb-6">
+      This is a simple web server written in Java using Spring Boot. It serves this static HTML page.
+      You can use this as a starting point for building more complex web applications with Spring Boot.
+    </p>
+    <div class="bg-blue-50 border border-blue-200 p-4 rounded-md">
+      <h2 class="text-xl font-semibold text-blue-800 mb-2">Run with DollarDeploy</h2>
+      <p class="text-blue-700">
+        Deploying and managing this application is easy with DollarDeploy. Connect your server, point DollarDeploy to
+        your Java Spring Boot code repository, and it handles the build, deployment, and monitoring automatically – no SSH required!
+      </p>
+    </div>
+  </div>
 </body>
+
 </html>
