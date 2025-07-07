@@ -7,7 +7,6 @@ This is a Java Spring Boot web application boilerplate. It includes a Gradle bui
 * Starts HTTP server serving static files and React components.
 * Listens on port 8080 by default, configurable via the `server.port` property.
 * Gradle build system for easy building, running, and development.
-* Integrates React frontend with Spring Boot backend using Thymeleaf.
 * Supports hot reloading for development.
 
 ## Prerequisites
@@ -119,8 +118,4 @@ java -jar -Dserver.port=9000 build/libs/example-java.jar
 
 ## About
 
-Boilerplate for a Java Spring Boot webapp with React frontend integration.
-
-## Related Projects
-
-* [Python React Boilerplate](https://github.com/AkiaCode/python-react-boilerplate)
+Boilerplate for a Java Spring Boot webapp which is easy to deploy to any cloud provider with DollarDeploy.
